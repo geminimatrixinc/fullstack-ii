@@ -14,4 +14,4 @@ const createUser = async (name, email) => {
 };
 
 // Call the function with example data
-createUser('John Doe', 'john.doe@example.com');
+createUser('Test User', 'test.user@example.com');
