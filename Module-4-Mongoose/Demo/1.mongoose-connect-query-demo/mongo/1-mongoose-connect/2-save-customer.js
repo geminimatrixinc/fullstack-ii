@@ -1,7 +1,7 @@
 
 var mongoose = require('mongoose');
 
-const connectionString ="mongodb://localhost:27017/busy-qa-mongoose-demo-2024";
+const connectionString ="mongodb://localhost:27017/mongoose-w-2024-fs-ii";
 
 
 const handleSuccess = () => console.log("Mongoose connected successfully "); // resolve()
@@ -13,6 +13,9 @@ mongoose.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: 
         handleSuccess,    // () => console.log("mongoose connected")
         handleError      // (err) => console.log(err)
   );
+
+
+////////////////////////////////
 
 var Schema = mongoose.Schema;
 
@@ -47,6 +50,8 @@ model.save(function(err) {
 
 // // SAVE SECOND USER TO MONGO DB
 var jane = Customer({name: 'jane', address:'Test', status: 'OK'})
+
+// // // SAVE USER TO MONGO DB
 jane.save(function() {
   console.log('**** jane saved ***')
 })
@@ -69,3 +74,4 @@ jane.save(function() {
 
 // var firstNames = customers.map(doc => doc.name);
 //console.log(firstNames)
+

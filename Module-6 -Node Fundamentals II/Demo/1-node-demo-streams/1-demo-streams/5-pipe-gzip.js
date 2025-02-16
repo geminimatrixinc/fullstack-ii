@@ -13,6 +13,6 @@ var gzipStream = zlib.createGzip();
 var writableStream = fs.createWriteStream('output.html.gz');
 
 // pipe the request to compression stream >> pipe >> writable stream 
-request('http://www.google.ca')
+request('http://georgebrown.ca')
     .pipe(gzipStream)
     .pipe(writableStream);

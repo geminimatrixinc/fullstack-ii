@@ -10,6 +10,7 @@ const addCustomer = async (name, address, status, age) => {
     } catch (error) {
         console.error('Error adding customer:', error.message);
     } finally {
+        // node process..current and will terminiate
         process.exit();
     }
 };

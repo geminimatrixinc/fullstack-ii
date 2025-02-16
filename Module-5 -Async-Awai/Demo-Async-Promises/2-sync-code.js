@@ -7,9 +7,9 @@ const log = (v) => console.log(`${v} \n Elapsed: ${Date.now() - tick} ms`)
 const codeBlocker = () => {
 
     let i = 0;
-    while (i < 10000000000) { 
+    while (i < 100000000) { 
         i++;
-        console.log(i)
+        //console.log(i)
     }
 
     return 'billion loops is done';

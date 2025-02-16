@@ -21,4 +21,4 @@ var interval = setInterval(() => {
   }
 
   interval; // not a function, a reference
-  //stopFunction();
+  setTimeout(stopFunction, 5000);

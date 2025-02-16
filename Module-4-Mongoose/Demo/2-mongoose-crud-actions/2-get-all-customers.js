@@ -3,7 +3,7 @@ const Customer = require('./Models/Customer');
 const getAllCustomers = async () => {
     try {
         // READ
-        const customers = await Customer.find({});
+        const customers = await Customer.find({});  // SELECT * FROM customers
 
         console.log('All Customers:', customers);
     } catch (error) {

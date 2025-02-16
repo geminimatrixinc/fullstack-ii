@@ -11,7 +11,7 @@ var fs = require("fs");
 var stream = fs.createWriteStream("data.txt");
 
 for(var i=0; i < 100; i++)
-stream.write("xxxx this an appended line...");
+    stream.write("ZZZZZZ this an appended line...");
 
 
 stream.end(() => {

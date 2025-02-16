@@ -1,32 +1,32 @@
 
 var mongoose = require('mongoose');
 
-const connectionString ="mongodb://localhost:27017/busy-qa-oct-2024";
+// this should be in your .env file
+const connectionString = process.env.CONNECTIONG_STRING || "mongodb://localhost:27017/gbc-w2025-fsii";
 
 mongoose.connect(connectionString)
 .then(
        () => console.log("mongoose started...")
   );
 
-
-
-
-
-
-
+// get instance of the connection..
   const dbConnection = mongoose.connection;
 
   // event listeners...
   dbConnection.on('open', () => {
     console.log(`mongoose connection open`)
   })
-    dbConnection.on('close', () => {
-        console.log(`mongoose connection closed`)
-    })
+  
+  dbConnection.on('disconnect', () => {
+      console.log(`mongoose connection closed`)
+  })
+  dbConnection.on('error', () => {
+      console.log(`mongoose connection error`)
+  })
 
-    dbConnection.on('err', () => {
-        console.log(`mongoose connection error`)
-    })
+  dbConnection.on('close', () => {
+      console.log(`mongoose connection closed`)
+  })
 
 
 

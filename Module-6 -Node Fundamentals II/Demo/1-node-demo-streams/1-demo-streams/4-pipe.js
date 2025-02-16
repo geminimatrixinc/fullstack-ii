@@ -6,5 +6,5 @@ var fs = require('fs');
 
 // use get request for google markup data
 // response is readable stream >> pipe data into writable stream >> output file
-request('http://google.ca')
+request('http://georgebrown.ca')
     .pipe(fs.createWriteStream('output.html'));

@@ -1,4 +1,5 @@
 const mongoose = require('../Helpers/db');
+
 const Schema = mongoose.Schema;
 
 const customerSchema = new Schema({

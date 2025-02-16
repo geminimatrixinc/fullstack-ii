@@ -7,9 +7,10 @@ const codeBlocker = () => {
 
     return new Promise(function(resolve, reject) {
         let i = 0;
-        while (i < 10000000000) { i++;
-        console.log(i)}
-    
+        while (i < 10000000000) { 
+            i++;
+        //console.log(i)}
+        }
         // however, creating promise is still happening on main thread, while loop still blocks,
         // and resolve is the microtask
         //if(i > 10000000000)

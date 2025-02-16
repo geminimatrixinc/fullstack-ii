@@ -19,6 +19,7 @@ app.get('/', function (req, res) {
             </html>`);
 });
 
+// server start ===>>
 var port = process.env.port || 3002;
 app.listen(port, () => {
     console.log('server is running on port 3002')

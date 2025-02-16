@@ -8,7 +8,7 @@ var app = express();
 app.use('/assets', express.static(__dirname + '/public') )
 app.use('/', express.static(__dirname + '/public') )
 
-app.use(morgan('combined'))
+app.use(morgan(':method :url :status :res[content-length] - :response-time ms')) //morgan('tiny || combined'))
 
 
 app.get('/', function (req, res) {
